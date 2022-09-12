@@ -2,7 +2,7 @@ name: ithings-admin-react build and deploy
 
 on:
     push:
-        branches: [test]
+        branches: [ci/test]
 
 env:
     cache-name: ithings-admin-react
@@ -45,4 +45,5 @@ jobs:
                   SOURCE: 'dist/'
                   REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
                   REMOTE_USER: ${{ secrets.REMOTE_USER }}
+                  REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
                   TARGET: /root/git/iThings/ithings/src/apisvr/dist
